@@ -42,6 +42,7 @@ android {
     }
     buildFeatures {
         compose = true
+        buildConfig = true
     }
     composeOptions {
         kotlinCompilerExtensionVersion = "1.5.8"
@@ -71,24 +72,27 @@ dependencies {
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
 
-    //Compose Navigation
+    //==================== Compose Navigation ====================
     val nav_version = "2.6.0"
     implementation ("androidx.navigation:navigation-compose:$nav_version")
 
-    //Dagger Hilt
+    //==================== Dagger Hilt ====================
     implementation ("com.google.dagger:hilt-android:2.48")
     kapt ("com.google.dagger:hilt-compiler:2.48")
     implementation ("androidx.hilt:hilt-navigation-compose:1.1.0")
 
 
-    //Retrofit
+    //==================== Retrofit ====================
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
 
-    //Room
+    //==================== Room ====================
     val room_version = "2.6.1"
     implementation ("androidx.room:room-runtime:$room_version")
     ksp ("androidx.room:room-compiler:$room_version")
     implementation ("androidx.room:room-ktx:$room_version")
+
+    //==================== Logging ====================
+    implementation ("com.jakewharton.timber:timber:5.0.1")
 
 }

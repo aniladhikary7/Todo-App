@@ -8,6 +8,7 @@ import com.anil.todo.data.remote.dto.asDatabaseModel
 import com.anil.todo.domain.model.Todo
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
+import timber.log.Timber
 import javax.inject.Inject
 
 class TodoRepository @Inject constructor(
@@ -24,7 +25,7 @@ class TodoRepository @Inject constructor(
             val todos = todoApi.getTodoList()
             appDatabase.todoDao.insertTodo(todos.asDatabaseModel())
         } catch (e: Exception) {
-            //Timber.w(e)
+            Timber.w(e)
         }
     }
 

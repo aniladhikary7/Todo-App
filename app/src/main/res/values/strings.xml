@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Todo-App</string>
+    <string name="please_check_network_connection">Please check your network connection</string>
+    <string name="my_todo_list">My Todo List</string>
 </resources>
